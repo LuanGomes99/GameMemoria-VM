@@ -366,8 +366,8 @@ body {
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    margin-top: 86vh;
-    margin-right: 32vh;
+    bottom: -10vw;
+    left: -5vh;
     display: flex;
     justify-content: center;
     align-items: center;
