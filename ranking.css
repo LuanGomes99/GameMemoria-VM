@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  overflow: hidden;
+}
+
+html {
+  touch-action: none;
+}
+
+body {
+  background-color: #2A5C8B;
+  /* Fundo azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  /* Para cortar o círculo laranja em telas menores */
+}
+
+@media (min-width: 1024px) {
+
+  .text-circle {
+    width: 30vw;
+    height: 30vw;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -5vw;
+    right: -5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%);
+    z-index: 4;
+    /* Alterado para 4 para ficar acima da .image-container */
+  }
+
+  .text-circle p {
+    color: #10AA69;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 10vw;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    /* Ajuste para mover o texto para cima */
+  }
+
+  .logo1 {
+    display: none;
+  }
+
+  .logo2 {
+    display: block;
+    position: fixed;
+    top: 4vw;
+    left: 4vw;
+    width: 30vw;
+    /* Defina a largura desejada */
+    height: auto;
+    /* Para manter a proporção da imagem */
+    z-index: 9999;
+    /* Certifique-se de que a imagem fique acima de outros elementos */
+  }
+
+  .table {
+    display: table;
+    width: 100%;
+    max-width: 600px;
+    font-size: 3rem;
+    border-spacing: 0;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    margin-top: 50px;
+  }
+
+  .row {
+    display: table-row;
+  }
+
+  .cell {
+    display: table-cell;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    /* Adiciona uma linha separadora */
+    white-space: nowrap;
+    /* Impede a quebra de linha */
+  }
+
+  /* Ajusta o nome para garantir que não quebre linha */
+  .cell.name-cell {
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    flex: 2;
+    /* Permite que o nome ocupe mais espaço */
+  }
+
+  .cell:nth-child(1) {
+    text-align: left;
+    /* Alinha a posição à esquerda */
+  }
+
+  .cell:nth-child(2) {
+    text-align: center;
+    /* Centraliza o nome */
+    padding-right: 150px;
+    /* Adiciona um espaço à direita para separar do número */
+    padding-left: 150px;
+    /* Adiciona um espaço à esquerda para separar do número */
+  }
+
+  .cell:nth-child(3) {
+    text-align: right;
+    /* Alinha a pontuação à direita */
+  }
+
+  .header {
+    font-weight: bold;
+    /* Cor de fundo para o cabeçalho */
+  }
+
+  .row:last-child .cell {
+    border-bottom: none;
+    /* Remove a linha separadora da última linha */
+  }
+
+  .return-button {
+    background-color: orange;
+    /* Fundo transparente para mostrar a imagem */
+    border: black;
+    /* Remove a borda */
+    cursor: pointer;
+    /* Muda o cursor ao passar por cima do botão */
+    position: fixed;
+    bottom: 20px;
+    /* Ajusta a distância do botão em relação ao fundo */
+    right: 20px;
+    /* Ajusta a distância do botão em relação à direita */
+    width: 80px;
+    /* Largura do botão */
+    height: 80px;
+    /* Altura do botão */
+    display: flex;
+    /* Permite alinhar o conteúdo */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+  }
+
+  .return-button img {
+    width: 40px;
+    /* Largura da imagem */
+    height: 40px;
+    /* Altura da imagem */
+  }
+
+  .titulo {
+    position: absolute;
+    /* Posiciona o elemento de forma absoluta */
+    top: 13%;
+    /* Coloca o topo do elemento no centro vertical da página */
+    left: 50%;
+    /* Coloca a esquerda do elemento no centro horizontal da página */
+    transform: translate(-50%, -50%);
+    /* Move o elemento de volta metade da sua largura e altura, para centralizá-lo */
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+    font-size: 4.5rem;
+    /* Tamanho do texto */
+    color: #FFF;
+    /* Cor do texto */
+    font-weight: 900;
+    /* Negrito */
+  }
+
+  .current-position {
+    margin-top: 2rem;
+    /* Mais espaço acima */
+    margin-bottom: 2rem;
+    /* Mais espaço abaixo */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    /* Centraliza o texto */
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border-top: 3px solid orange;
+    /* Linha mais grossa e laranja */
+    background-color: #f9f9f9;
+  }
+}
+
+.divisor {
+  border-top: 3px solid orange;
+  /* Define a espessura e a cor da linha */
+  margin-top: 1rem;
+  /* Espaço adicional acima da linha */
+  margin-bottom: 1rem;
+  /* Espaço adicional abaixo da linha */
+}

@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  overflow: hidden;
+}
+
+html {
+  touch-action: none;
+}
+
+body {
+  background-color: #2A5C8B;
+  /* Fundo azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  /* Para cortar o círculo laranja em telas menores */
+}
+
+@media (min-width: 1024px) {
+
+  .text-circle {
+    width: 30vw;
+    height: 30vw;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -5vw;
+    right: -5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%);
+    z-index: 4;
+    /* Alterado para 4 para ficar acima da .image-container */
+  }
+
+  .text-circle p {
+    color: #10AA69;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 10vw;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    /* Ajuste para mover o texto para cima */
+  }
+
+  .logo1 {
+    display: none;
+  }
+
+  .logo2 {
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 30vw;
+    /* Defina a largura desejada */
+    height: auto;
+    /* Para manter a proporção da imagem */
+    z-index: 9999;
+    /* Certifique-se de que a imagem fique acima de outros elementos */
+  }
+
+  .game-over-screen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 500px;
+  }
+
+  .game-over-screen h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 5.5rem;
+    color: white;
+  }
+  #orientation-text {
+    margin-top: 65px;
+    margin-bottom: 50px;
+  
+  }
+  .game-over-screen #sub-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: white;
+  }
+  .game-over-screen p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    max-width: 1800px;
+  }
+
+
+  .container {
+    width: 75%;
+    background-color: white;
+    font-size: 1rem;
+    margin-left: 2.5vw;
+    margin-top: 200px;
+    border-radius: 10px;
+  }
+
+  .input-nome {
+    display: flex;
+    gap: 15.2vw;
+    padding: 3vw 2vw;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+  }
+
+  .input-nome button {
+    width: 200px;
+  }
+
+  input {
+    width: 60vw;
+    font-family: 'Poppins';
+    font-weight: 600;
+    outline: none;
+  }
+
+  button {
+    font-family: 'Poppins';
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .text-circle {
+    width: 280px;
+    height: 280px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -90px;
+    right: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%);
+    z-index: 4;
+    /* Alterado para 4 para ficar acima da .image-container */
+  }
+
+  .text-circle p {
+    color: #10AA69;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    margin-top: 50px;
+    margin-right: 50px;
+    /* Ajuste para mover o texto para cima */
+  }
+
+  .logo1 {
+    display: none;
+  }
+
+  .logo2 {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    /* Defina a largura desejada */
+    height: auto;
+    /* Para manter a proporção da imagem */
+    z-index: 9999;
+    /* Certifique-se de que a imagem fique acima de outros elementos */
+  }
+
+  .memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  .memory-square {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-color: #FFEC4C;
+    background-size: cover;
+    background-position: center;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+  }
+
+  /* Estilize o lado de trás dos cards separadamente */
+  .memory-square.back {
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+  }
+
+  .memory-square.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .memory-square.flipped .back {
+    display: none;
+    /* Oculta o lado de trás quando o card estiver virado */
+  }
+
+  .game-over-screen {
+    text-align: center;
+    align-items: center;
+  }
+
+  .game-over-screen h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 2.6rem;
+    color: white;
+  }
+  .game-over-screen #sub-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: white;
+  }
+  #orientation-text {
+    margin-top: 25px;
+  }
+  .game-over-screen p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: white;
+    max-width: 550px;
+    margin-left: 50px;
+  }
+
+  button,
+  input {
+    padding: 8px;
+    background-color: white;
+  }
+
+  .container {
+    background-color: white;
+    align-items: center;
+  }
+
+  .input-nome {
+    padding: 8px 4px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  input {
+    width: 5vw;
+    outline: none;
+    font-family: 'Poppins';
+    font-weight: 6000;
+  }
+
+  button {
+    font-family: 'Poppins';
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 768px) {}

@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  overflow: hidden;
+}
+
+html {
+  touch-action: none;
+}
+
+body {
+  background-color: #2A5C8B;
+  /* Fundo azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+  /* Para colocar a imagem na frente de todos os elementos */
+}
+
+.image-container img {
+  width: 90%;
+  /* Ajuste o valor da largura conforme necessário para aumentar o tamanho da imagem */
+  max-height: 110vh;
+  display: block;
+  margin: 0 auto;
+  align-self: flex-end;
+  /* Alinha a parte de baixo da imagem com a borda inferior da página */
+}
+
+@media (min-width: 1024px) {
+
+  p {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Ajuste de tamanho da imagem em telas grandes (tela cheia) */
+  .image-container img {
+    width: 90vw;
+    max-height: 110vh;
+  }
+
+  .orange-semi-circle {
+    width: 140vw;
+    /* Largura extra para garantir que não seja achatado */
+    height: 35vh;
+    /* Altura maior para telas menores */
+    background-color: #E99839;
+    /* Semicírculo laranja */
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    position: absolute;
+    top: 0;
+    /* Posicionado no topo */
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: 1;
+    overflow: hidden;
+    /* Para cortar o círculo laranja em telas menores */
+  }
+
+  .yellow-circle {
+    width: 31vw;
+    height: 31vw;
+    background-color: #FFEC4C;
+    /* Círculo amarelo */
+    border-radius: 50%;
+    position: absolute;
+    top: 46.5vw;
+    left: 40vw;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .info-text {
+    position: absolute;
+    top: 8vw;
+    right: 10vw;
+    color: white;
+    font-size: 1.5rem;
+    text-align: right;
+    max-width: 34vw;
+    z-index: 5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: justify;
+  }
+
+  .button-play {
+    position: absolute;
+    top: 22vw;
+    margin-left: 46vw;
+    padding: 1vw 1vw;
+    font-size: 1.8rem;
+    background-color: #2A5C8B;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    width: 34vw;
+    text-align: center;
+  }
+
+  .text-circle {
+    width: 42vw;
+    height: 42vw;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1vw;
+    left: -4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%);
+    z-index: 4;
+    /* Alterado para 4 para ficar acima da .image-container */
+  }
+
+  .text-circle p {
+    color: #10AA69;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 8vw;
+    margin-top: -8vw;
+    margin-left: 1vw;
+  }
+
+  .logo1 {
+    display: none;
+  }
+
+  .logo2 {
+    display: block;
+    position: fixed;
+    top: 4vw;
+    left: 4vw;
+    width: 38vw;
+    /* Defina a largura desejada */
+    height: auto;
+    /* Para manter a proporção da imagem */
+    z-index: 9999;
+    /* Certifique-se de que a imagem fique acima de outros elementos */
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .image-container img {
+    width: 80%;
+    max-height: 100vh;
+  }
+
+  .yellow-circle {
+    width: 280px;
+    height: 280px;
+    background-color: #FFEC4C;
+    /* Círculo amarelo */
+    border-radius: 50%;
+    position: absolute;
+    top: 285px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .info-text {
+    position: absolute;
+    top: 35px;
+    color: white;
+    font-size: 1.1rem;
+    text-align: right;
+    max-width: 360px;
+    z-index: 5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: justify;
+  }
+
+  .button-play {
+    position: absolute;
+    bottom: 80px;
+    right: 100px;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    background-color: #E99839;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+
+  .logo1 {
+    display: none;
+  }
+
+  .logo2 {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    /* Defina a largura desejada */
+    height: auto;
+    /* Para manter a proporção da imagem */
+    z-index: 9999;
+    /* Certifique-se de que a imagem fique acima de outros elementos */
+  }
+
+  .text-circle {
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -90px;
+    left: -90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%);
+    z-index: 4;
+    /* Alterado para 4 para ficar acima da .image-container */
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* Ajuste de tamanho da imagem em telas menores (celular) */
+  .image-container img {
+    width: 100%;
+    max-height: 100vh;
+  }
+
+  .text-circle {
+    width: 270px;
+    height: 270px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -90px;
+    left: -90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%);
+  }
+
+  .text-circle p {
+    color: #10AA69;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    margin-top: -60px;
+    margin-left: 30px;
+    /* Ajuste para mover o texto para cima */
+  }
+
+  .yellow-circle {
+    width: 270px;
+    height: 270px;
+    background-color: #FFEC4C;
+    /* Círculo amarelo */
+    border-radius: 50%;
+    position: absolute;
+    top: 285px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .info-text {
+    position: absolute;
+    top: 40px;
+    color: white;
+    font-size: 1rem;
+    text-align: right;
+    max-width: 280px;
+    z-index: 5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: justify;
+  }
+
+  .button-play {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: #E99839;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+
+  .logo2 {
+    display: none;
+  }
+
+  .logo1 {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    /* Defina a largura desejada */
+    height: auto;
+    /* Para manter a proporção da imagem */
+    z-index: 9999;
+    /* Certifique-se de que a imagem fique acima de outros elementos */
+  }
+}
+
+span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}

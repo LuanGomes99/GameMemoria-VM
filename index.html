@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game da Memória</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="orange-semi-circle"></div>
+  <div class="yellow-circle"></div>
+
+  <div class="image-container">
+    <img src="./assets/Mulher.png" alt="Mulher">
+  </div>
+
+  <div class="text-circle">
+    <p>JOGO DA<br>MEMÓRIA</p>
+  </div>
+
+  <div class="info-text">
+    <p><span>Exercite sua memória</span> com diversão garantida! O <span>Jogo da Memória Visual Mídia</span> está aqui
+      para desafiar
+      sua mente</p>
+  </div>
+
+  <div class="button-play" onclick="buttonJogar()">
+    <button>TOQUE PARA JOGAR</button>
+  </div>
+
+
+
+  <img class="logo1" src="./assets/logo.png" alt="">
+  <img class=" logo2" src="./assets/logovm.png" alt="">
+
+</body>
+<script>
+
+  function buttonJogar() {
+    window.location.href = "game.html";
+  }
+
+  // Função para pré-carregar imagens
+  function preloadImages(imageArray, callback) {
+    let loadedImages = 0;
+    const totalImages = imageArray.length;
+
+    imageArray.forEach((imageSrc) => {
+      const img = new Image();
+      img.src = imageSrc;
+      img.onload = () => {
+        loadedImages++;
+        if (loadedImages === totalImages) {
+          callback();
+        }
+      };
+      img.onerror = img.onabort = () => {
+        loadedImages++;
+        if (loadedImages === totalImages) {
+          callback();
+        }
+      };
+    });
+  }
+
+  // Lista de todas as imagens a serem pré-carregadas
+  const allImages = [
+    './assets/Mulher.png',
+    './assets/logo.png',
+    './assets/logovm.png',
+    './assets/csharp.png', './assets/excel.png', './assets/html.png',
+    './assets/illustrator.png', './assets/js.png', './assets/photoshop.png',
+    './assets/pp.png', './assets/premiere.png', './assets/win11.png', './assets/word.png'
+  ];
+
+  // Pré-carrega todas as imagens e inicia o jogo
+  preloadImages(allImages, () => {
+    console.log('Todas as imagens foram carregadas.');
+  });
+</script>
+
+</html>
