@@ -40,7 +40,7 @@ body {
   /* Alinha a parte de baixo da imagem com a borda inferior da página */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 2160px) AND (max-height: 3840px) {
 
   p {
     -webkit-user-select: none;
@@ -162,33 +162,58 @@ body {
   }
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
+/* PC - FULL HD */
+@media (min-width: 1500px) AND (max-height: 1080px) {
+  p {
+    -webkit-user-select: none;
+    user-select: none;
+  }
 
+  /* Ajuste de tamanho da imagem em telas grandes (tela cheia) */
   .image-container img {
-    width: 80%;
+    width: 25vw;
     max-height: 100vh;
   }
 
+  .orange-semi-circle {
+    width: 120vw;
+    /* Largura extra para garantir que não seja achatado */
+    height: 60vh;
+    /* Altura maior para telas menores */
+    background-color: #E99839;
+    /* Semicírculo laranja */
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    position: absolute;
+    top: 0;
+    /* Posicionado no topo */
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: 1;
+    overflow: hidden;
+    /* Para cortar o círculo laranja em telas menores */
+  }
+
   .yellow-circle {
-    width: 280px;
-    height: 280px;
+    width: 20vw;
+    height: 20vw;
     background-color: #FFEC4C;
     /* Círculo amarelo */
     border-radius: 50%;
     position: absolute;
-    top: 285px;
-    left: 40%;
+    top: 20vw;
+    left: 44vw;
     transform: translate(-50%, -50%);
     z-index: 2;
   }
 
   .info-text {
     position: absolute;
-    top: 35px;
+    top: 5vw;
+    right: 5vw;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-align: right;
-    max-width: 360px;
+    max-width: 34vw;
     z-index: 5;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -198,44 +223,30 @@ body {
 
   .button-play {
     position: absolute;
-    bottom: 80px;
-    right: 100px;
-    padding: 20px 40px;
-    font-size: 1.2rem;
-    background-color: #E99839;
+    top: 13vw;
+    margin-left: 56vw;
+    padding: 1vw 1vw;
+    font-size: 2rem;
+    background-color: #2A5C8B;
     color: white;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     z-index: 5;
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
-  }
-
-  .logo1 {
-    display: none;
-  }
-
-  .logo2 {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 150px;
-    /* Defina a largura desejada */
-    height: auto;
-    /* Para manter a proporção da imagem */
-    z-index: 9999;
-    /* Certifique-se de que a imagem fique acima de outros elementos */
+    font-weight: 900;
+    width: 34vw;
+    text-align: center;
   }
 
   .text-circle {
-    width: 320px;
-    height: 320px;
+    width: 20vw;
+    height: 20vw;
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    bottom: -90px;
-    left: -90px;
+    bottom: -5vw;
+    left: -5vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,62 +255,136 @@ body {
     /* Alterado para 4 para ficar acima da .image-container */
   }
 
-}
-
-@media (max-width: 768px) {
-
-  /* Ajuste de tamanho da imagem em telas menores (celular) */
-  .image-container img {
-    width: 100%;
-    max-height: 100vh;
-  }
-
-  .text-circle {
-    width: 270px;
-    height: 270px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -90px;
-    left: -90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%);
-  }
-
   .text-circle p {
     color: #10AA69;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
-    margin: 0;
-    padding: 20px;
-    margin-top: -60px;
-    margin-left: 30px;
-    /* Ajuste para mover o texto para cima */
+    padding: 5vw;
+    margin-top: -4vw;
+    margin-left: 2vw;
+  }
+
+  .logo1 {
+    display: none;
+  }
+
+  .logo2 {
+    display: block;
+    position: fixed;
+    top: 2vw;
+    left: 2vw;
+    width: 18vw;
+    /* Defina a largura desejada */
+    height: auto;
+    /* Para manter a proporção da imagem */
+    z-index: 9999;
+    /* Certifique-se de que a imagem fique acima de outros elementos */
+  }
+}
+
+/* Para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .image-container img {
+    width: 70%;
+    max-height: 80vh;
+  }
+
+  .orange-semi-circle {
+    width: 110vw;
+    height: 25vh;
   }
 
   .yellow-circle {
-    width: 270px;
-    height: 270px;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .info-text {
+    top: 4vw;
+    right: 6vw;
+    font-size: 1rem;
+  }
+
+  .button-play {
+    top: 12vw;
+    margin-left: 35vw;
+    font-size: 1.2rem;
+    width: 28vw;
+  }
+
+  .text-circle {
+    width: 30vw;
+    height: 30vw;
+    bottom: 2vw;
+    left: -2vw;
+  }
+
+  .text-circle p {
+    font-size: 2rem;
+    padding: 6vw;
+    margin-top: -6vw;
+  }
+
+  .logo2 {
+    top: 2.5vw;
+    left: 2.5vw;
+    width: 25vw;
+  }
+}
+
+/* Para celulares */
+@media (max-width: 767px) {
+  p {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Ajuste de tamanho da imagem em telas grandes (tela cheia) */
+  .image-container img {
+    width: 100vw;
+    max-height: 100vh;
+  }
+
+  .orange-semi-circle {
+    width: 200vw;
+    /* Largura extra para garantir que não seja achatado */
+    height: 55vh;
+    /* Altura maior para telas menores */
+    background-color: #E99839;
+    /* Semicírculo laranja */
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    position: absolute;
+    top: 0;
+    /* Posicionado no topo */
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: 1;
+    overflow: hidden;
+    /* Para cortar o círculo laranja em telas menores */
+  }
+
+  .yellow-circle {
+    width: 58vw;
+    height: 58vw;
     background-color: #FFEC4C;
     /* Círculo amarelo */
     border-radius: 50%;
     position: absolute;
-    top: 285px;
-    left: 40%;
+    top: 92vw;
+    left: 44vw;
     transform: translate(-50%, -50%);
     z-index: 2;
   }
 
   .info-text {
     position: absolute;
-    top: 40px;
+    top: 20vw;
+    right: 18vw;
     color: white;
     font-size: 1rem;
     text-align: right;
-    max-width: 280px;
+    max-width: 60vw;
     z-index: 5;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -309,29 +394,58 @@ body {
 
   .button-play {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    background-color: #E99839;
+    top: 48vw;
+    margin-right: -4vw;
+    padding: 1vw 1vw;
+    font-size: 1rem;
+    background-color: #2A5C8B;
     color: white;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     z-index: 5;
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-weight: 900;
+    width: 60vw;
+    text-align: center;
   }
 
-  .logo2 {
-    display: none;
+  .text-circle {
+    width: 45vw;
+    height: 45vw;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8vw;
+    left: -8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 0% 100%);
+    z-index: 4;
+    /* Alterado para 4 para ficar acima da .image-container */
+  }
+
+  .text-circle p {
+    color: #10AA69;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 5vw;
+    margin-top: -7vw;
+    margin-left: 5vw;
   }
 
   .logo1 {
+    display: none;
+  }
+
+  .logo2 {
+    display: block;
     position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 50px;
+    top: 2vw;
+    left: 2vw;
+    width: 40vw;
     /* Defina a largura desejada */
     height: auto;
     /* Para manter a proporção da imagem */
