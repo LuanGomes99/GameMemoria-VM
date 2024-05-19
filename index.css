@@ -334,7 +334,7 @@ body {
 }
 
 /* Para celulares */
-@media (max-width: 767px) {
+@media (min-width: 767px) {
   p {
     -webkit-user-select: none;
     user-select: none;
