@@ -31,10 +31,11 @@
   <div class="button-play" onclick="buttonJogar()">
     <button>TOQUE PARA JOGAR</button>
   </div>
-  <button class="button-full" id="fullscreenButton">Enter Fullscreen</button>
+
+
 
   <img class="logo1" src="./assets/logo.png" alt="">
-  <img class="logo2" src="./assets/logovm.png" alt="">
+  <img class=" logo2" src="./assets/logovm.png" alt="">
 
 </body>
 <script>
@@ -65,19 +66,6 @@
       };
     });
   }
-
-  document.getElementById('fullscreenButton').addEventListener('click', function () {
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) { // Firefox
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-      document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-      document.documentElement.msRequestFullscreen();
-    }
-  });
-
 
   // Lista de todas as imagens a serem pré-carregadas
   const allImages = [
