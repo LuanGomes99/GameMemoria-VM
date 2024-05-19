@@ -416,8 +416,8 @@ body {
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    bottom: -8vw;
-    left: -8vw;
+    margin-top: 86vh;
+    margin-right: 32vh;
     display: flex;
     justify-content: center;
     align-items: center;
