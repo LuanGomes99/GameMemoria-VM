@@ -283,56 +283,6 @@ body {
   }
 }
 
-/* Para tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .image-container img {
-    width: 70%;
-    max-height: 80vh;
-  }
-
-  .orange-semi-circle {
-    width: 110vw;
-    height: 25vh;
-  }
-
-  .yellow-circle {
-    width: 20vw;
-    height: 20vw;
-  }
-
-  .info-text {
-    top: 4vw;
-    right: 6vw;
-    font-size: 1rem;
-  }
-
-  .button-play {
-    top: 12vw;
-    margin-left: 35vw;
-    font-size: 1.2rem;
-    width: 28vw;
-  }
-
-  .text-circle {
-    width: 30vw;
-    height: 30vw;
-    bottom: 2vw;
-    left: -2vw;
-  }
-
-  .text-circle p {
-    font-size: 2rem;
-    padding: 6vw;
-    margin-top: -6vw;
-  }
-
-  .logo2 {
-    top: 2.5vw;
-    left: 2.5vw;
-    width: 25vw;
-  }
-}
-
 /* Para celulares */
 @media (min-width: 767px) {
   p {
