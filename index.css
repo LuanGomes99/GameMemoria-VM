@@ -360,6 +360,24 @@ body {
     text-align: center;
   }
 
+  .button-full {
+    position: absolute;
+    top: 55vw;
+    margin-right: -4vw;
+    padding: 1vw 1vw;
+    font-size: 1rem;
+    background-color: #2A5C8B;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    width: 60vw;
+    text-align: center;
+  }
+
   .text-circle {
     width: 45vw;
     height: 45vw;
